@@ -1,0 +1,5 @@
+<img src="small-image.jpg" 
+     srcset="small-image.jpg 600w, large-image.jpg 1200w" 
+     sizes="(max-width: 600px) 100vw, 50vw"
+     class="img-fluid" alt="صورة">
+عمل صورة رسبونسف

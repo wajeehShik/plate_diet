@@ -19,6 +19,10 @@
     border-radius: 21px;
     height: 100px;
 }
+
+.checkbox-custom{
+    width: 600px;
+}
 .login button{
         width: 645px;
     height: 41px;
@@ -37,5 +41,12 @@
 @media(max-width:800px){
     .login .input-custom,.checkbox-custom,.login button{
         width: 300px;
+    }
+    @media(max-width:501px){
+        .login form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
