@@ -1,0 +1,98 @@
+body{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul li{
+list-style: none;
+}
+.navbar{
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: transparent !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  .navbar-light .navbar-nav .nav-link{
+      color: #2a4033; 
+  transition: color 0.3s ease, transform 0.3s ease; 
+  
+  }
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .nav-item.dropdown .dropdown-menu {
+    margin-top: 0;
+  }
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link,
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #1aa139;
+    font-weight: 500; 
+transform: scale(1.1); 
+}
+.navbar-nav{
+  display: flex;
+  column-gap: 15px;
+}
+.nav-logo{
+    
+    width: 91px;
+    height: 97px;
+}
+.btn-nav:hover{
+  background: #8dbf47;
+  color:white !important; 
+  border-radius: 13px
+}
+.timer {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.5)); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    border-radius: 20px; 
+    padding: 5px 15px; 
+    color: #ffffff; 
+    font-weight: bold;
+    font-size: 1rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); 
+    display: inline-block; 
+    transition: all 0.3s ease-in-out; 
+}
+.timer {
+    background: rgba(0, 0, 0, 0.8); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+/* footer */
+footer{
+    background-color:#e6f1d8;
+    padding-bottom: 20px;
+  }
+  footer .logo{
+    width: 150px;
+    height: auto;
+  }
+  footer h2{
+    color:#8dbf47
+  }
+  footer .links ul li{
+    padding-top: 5px;
+    padding-bottom: 5px;  
+  }
+  footer .links ul li a
+  {color:#524c4c;
+    transition: .5 ease all;
+  }
+  footer .links ul li a:hover{
+    color:#333;
+  }
+  footer .apps ul li{
+    background: black;
+    width: 125px;
+    padding: 18px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  footer .apps ul li a,
+  footer .apps ul li span{
+    color:white;
+  }

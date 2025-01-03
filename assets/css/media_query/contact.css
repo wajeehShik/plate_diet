@@ -1,0 +1,26 @@
+@media (max-width: 1951px) {
+
+    .contact-image {
+        width: 500px;
+        height: 500px;
+    }
+  }
+  @media (max-width: 1551px) {
+
+    .contact-image {
+        width: 500px;
+        height: 500px;
+    }
+    form{
+        margin-bottom: 20px;
+    }
+  }
+  @media (max-width: 1418px) {
+    .login input[type="text"], .login input[type="email"],.login textarea,.login button{
+        width: 418px;
+    }
+    .contact-image {
+        width: 200px;
+        height: 604px;
+    }
+  }

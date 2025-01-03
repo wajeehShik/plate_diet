@@ -1,0 +1,41 @@
+.login{
+    padding-top: 42px;
+}
+.login-image{
+    width: 100%;
+}
+.login .input-custom{
+    width: 645px;
+    height: 54px;
+    border: 0;
+    border: 2px solid #8DBF47;
+    box-shadow: -2px -4px 8px #eee;
+    border-radius: 21px;
+}
+.login textarea{
+    border: 0;
+    border: 2px solid #8DBF47;
+    box-shadow: -2px -4px 8px #eee;
+    border-radius: 21px;
+    height: 100px;
+}
+.login button{
+        width: 645px;
+    height: 41px;
+    border-radius: 21px;
+    background: #8DBF47;
+    border: 0;
+    margin-top: 20px;
+    color: white;
+}
+.login a{
+    color:#726f6f;
+}
+.login .register{
+    margin-top: 20px !important;
+}
+@media(max-width:800px){
+    .login .input-custom,.checkbox-custom,.login button{
+        width: 300px;
+    }
+}

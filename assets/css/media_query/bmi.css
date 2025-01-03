@@ -1,0 +1,24 @@
+@media(max-width:1205px){
+    form .row {
+        width: 631px;
+        border-radius: 33px;
+    }
+    form .row .input-calc {
+        width: 262px;}
+}
+@media(max-width:990px){
+    form .row .input-calc {
+        width: 162px;
+    }
+    form .row {
+        width: 469px;
+        border-radius: 33px;
+    }
+    form .row .btn-calc {
+        width: 177px;
+        margin: auto;
+    }
+    .container, .container-md, .container-sm {
+        max-width: 920px;
+    }
+}
