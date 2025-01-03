@@ -96,3 +96,11 @@ footer{
   footer .apps ul li span{
     color:white;
   }
+  
+/* تصميم خاص بالشاشات الصغيرة */
+@media (max-width: 768px) {
+  .timer {
+      font-size: 0.5rem; /* تصغير النص */
+      padding: 4px 10px; /* تقليل المساحة */
+  }
+}
