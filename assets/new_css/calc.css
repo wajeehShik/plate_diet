@@ -1,0 +1,141 @@
+.navbar-light .navbar-nav .nav-link{
+    color: #1a5131;
+    font-weight: bold;
+}
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link, .navbar-light .navbar-nav .nav-link:hover{
+    color:white;
+}
+.navbar{
+    backdrop-filter:none !important;
+}
+.modal-header{
+    border-radius: 20px;
+}
+.calc{
+background-image: url("../image/water.png");
+background-color: rgba(81, 81, 102, 0.5); 
+background-blend-mode: overlay;
+background-size: cover;
+background-position: center; 
+height: 654px;
+background-size: 122% 760px;
+background-repeat: no-repeat;
+margin-top: -163px; 
+text-align: left;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.predcamp{
+    display: inline-block;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    background: #8DBF47;
+    min-width: 346px;
+    border-radius: 16px;
+    font-size: 23px;
+    margin-bottom: 30px;
+    color: white;
+    text-align: center;
+    }
+ .predcamp a{
+    color:white;
+    }
+.content i{
+color:#8dbf47
+}
+form .row {
+border: 2px solid #8DBF47;
+margin-top: 22px;
+padding: 18px;
+margin-bottom: 70px;
+border-radius: 28px;
+box-shadow: 1px 0px 8px #cbe2ac;
+}
+form .row .input-calc {
+width: 100%;
+background: #E6F1D8;
+border-radius: 12px;
+border: none;
+height: 41px;
+margin-bottom: 10px;
+padding-right: 14px;
+outline: none;
+}
+form .row .btn-calc {
+width: 277px;
+height: 41px;
+border-radius: 8px;
+background: #8DBF47;
+border: 0;
+margin-top: 11px;
+color: white;
+}
+.custom-modal {
+border-radius: 20px;
+overflow: hidden;
+transform: scale(0.98);
+transition: all 0.4s ease-in-out;
+box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+.modal.show .custom-modal {
+transform: scale(1);
+box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2); 
+}
+.modal-header {
+background: linear-gradient(120deg, #6db65b, #3e8e41);
+color: white;
+font-weight: bold;
+text-align: center;
+padding: 1rem;
+border-bottom: 2px solid #4a7c38; 
+}
+.modal-body {
+text-align: center;
+padding: 2rem;
+background-color: #f3f9f3;
+}
+.modal-content{
+border-radius: 20px;
+}
+.modal-body{
+    border-radius: 20px;
+}
+.modal-body p {
+font-size: 1.25rem;
+color: #333;
+margin-bottom: 1.5rem;
+}
+.modal-body img {
+max-width: 120px;
+margin-bottom: 1.5rem;
+border-radius: 50%;
+}
+.modal.fade .modal-dialog {
+opacity: 0;
+transform: translateY(-30px);
+transition: all 0.3s ease-out;
+}
+
+.modal.fade.show .modal-dialog {
+opacity: 1;
+transform: translateY(0); 
+}
+.modal-data p{
+font-size: 18px;
+}
+.close-modal{
+display: block;
+width: 29px;
+height: 29px;
+border: 1px solid white;
+text-align: center;
+border-radius: 24px;
+color: white;
+transition: 0ms all ease;
+}
+.close-modal:hover{
+    background-color: white;
+    color:#333 ;
+}

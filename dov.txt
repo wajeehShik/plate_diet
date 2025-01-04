@@ -3,3 +3,6 @@
      sizes="(max-width: 600px) 100vw, 50vw"
      class="img-fluid" alt="صورة">
 عمل صورة رسبونسف
+
+
+modal-dialog-centered كلاس يجعل بوب اب في منتصف الشاشة
