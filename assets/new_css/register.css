@@ -113,7 +113,9 @@
     }
 }
 @media (max-width:501px) {
- 
+    .custom-width{
+        margin: auto;
+    }
     .input-calc-full ,.input-calc2,
     .input-calc,.custom-width, .textarea2 {
         width: 279px;
