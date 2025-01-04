@@ -113,9 +113,7 @@
     }
 }
 @media (max-width:501px) {
-    body{
-        background-color: red;
-    }
+ 
     .input-calc-full ,.input-calc2,
     .input-calc,.custom-width, .textarea2 {
         width: 279px;
