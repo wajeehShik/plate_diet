@@ -103,4 +103,9 @@ footer{
       font-size: 0.5rem; /* تصغير النص */
       padding: 4px 10px; /* تقليل المساحة */
   }
+  @media(max-width:400px){
+    .timer{
+      width: 83px;
+    }
+  }
 }

@@ -1,4 +1,4 @@
-    const targetDate = new Date("2024-12-31T23:59:59");
+    const targetDate = new Date("2025-12-31T23:59:59");
 
     function updateTimer() {
         const now = new Date();
@@ -30,20 +30,20 @@
     
 
 
-var swiper = new Swiper(".reviews-slider", {
-    loop:true,
-    grabCursor:true,
-    spaceBetween: 15,
-    breakpoints: {
-       640: {
-         slidesPerView: 1,
-       },
-       768: {
-         slidesPerView: 2,
-       },
-       991: {
-         slidesPerView: 2,
-       },
-    },
- });
+// var swiper = new Swiper(".reviews-slider", {
+//     loop:true,
+//     grabCursor:true,
+//     spaceBetween: 15,
+//     breakpoints: {
+//        640: {
+//          slidesPerView: 1,
+//        },
+//        768: {
+//          slidesPerView: 2,
+//        },
+//        991: {
+//          slidesPerView: 2,
+//        },
+//     },
+//  });
  

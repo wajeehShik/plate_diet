@@ -3,6 +3,7 @@
 }
 .login-image{
     width: 100%;
+    height: 100%;
 }
 .login .input-custom{
     width: 645px;
@@ -42,7 +43,7 @@
     .login .input-custom,.checkbox-custom,.login button{
         width: 300px;
     }
-    @media(max-width:501px){
+    @media(max-width:701px){
         .login form{
             display: flex;
             flex-direction: column;

@@ -1,0 +1,130 @@
+
+#foodnote,
+#illnote {
+    display: none;
+}
+.form-step {
+    display: none;
+    transform-origin: top;
+    animation: animate .5s;
+    transition: animate .3s;
+}
+.from-step-active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn-next{
+    margin: auto;
+}
+@keyframes animate {
+    from {
+        transform: scale(1, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+.input-custom{
+    background: #E6F1D8;
+    border-radius: 16px;
+    border: none;
+    height: 41px;
+    padding-right: 14px;
+    outline: none;
+}
+
+.input-calc-full {
+    width: 406px;
+}
+.input-calc { 
+       width: 179px;
+}
+.input-calc2 {
+    width:406px;
+}
+.custom-width{
+    
+    width: 231px;
+}
+.textarea2 {
+    width: 533px;
+    background: #E6F1D8;
+    border-radius: 16px;
+    border: none;
+    height: 73px;
+    padding-right: 14px;
+    outline: none;
+}
+.police {
+    justify-content: space-around;
+    margin-top: 5px;
+
+}
+.police input {
+    width: 30px;
+    height: 60px
+}
+
+.police span {
+    margin-top: 17px;
+    font-size: 16px;
+}
+
+.btn-calc {
+    width: 277px;
+    height: 41px;
+    border-radius: 8px;
+    background: #8DBF47;
+    border: 0;
+    color: white;
+}
+
+.btn-calc:hover,
+.btn-calc:focus {
+    border: 2px solid #8DBF47 !important;
+    color: #fff !important;
+
+}
+.register{
+    
+    align-items: center;
+    justify-content: center;
+    margin-top: 21px !important;
+    margin-bottom: 20px;
+}
+.register-image{
+    width: 100%;
+    height: 100%;
+}
+@media (min-width:764px) and (max-width:991px){
+    .input-calc {
+        width: 221px;
+    }
+    .custom-width {
+        width: 293px;
+    }
+    .police {
+        justify-content: normal;
+    }
+}
+@media (max-width:501px) {
+    body{
+        background-color: red;
+    }
+    .input-calc,.custom-width, .textarea2 {
+        width: 279px;
+    }
+    .police {
+        text-align: center;
+        justify-content: center;
+    }
+
+        .second-form .row{
+            text-align: center;
+        }
+}
