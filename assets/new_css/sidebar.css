@@ -144,3 +144,10 @@ transition: all .2s ease;
         width: 280px;;
     }
 }
+@media(max-width:716px){
+    form .row {
+        margin-right: 15px;
+        margin-left: 15px;}
+        form .row .btn-calc {
+            width: 242px;}
+}
