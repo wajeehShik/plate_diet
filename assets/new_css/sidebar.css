@@ -4,7 +4,7 @@
     border-radius: 10px;
     padding-top: 20px;
     padding-right: 30px;
-    margin: auto;
+    margin-right: 39px;
     margin-bottom: 30px;
     width: 388px;
 }
@@ -140,9 +140,15 @@ transition: all .2s ease;
     color: #fff;
     background: #223a66;
 }
+@media(max-width:1375px){
+    .sidebar{
+        width: 288px;
+        margin-right: 50px;
+    }
+}
 @media(max-width:1070px){
     .sidebar{
-        width: 280px;;
+        width: 280px;
     }
 }
 @media(max-width:716px){
@@ -151,4 +157,8 @@ transition: all .2s ease;
         margin-left: 15px;}
         form .row .btn-calc {
             width: 242px;}
+
+            .order-custom{
+                order:2;
+            }
 }
