@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="assets/new_css/style.css">
     <link rel="stylesheet" href="assets/new_css/calc.css">
     <link rel="stylesheet" href="assets/new_css/sidebar.css">
-    <link rel="stylesheet" href="assets/new_css/pagination.css">
-    <link rel="stylesheet" href="assets/new_css/articlas.css">
     <title> طبق صحي</title>
+    <style>
+        form .row .btn-calc {margin: auto;}
+    </style>
   </head>
   <body>
     <nav class="navbar  navbar-expand-lg navbar-light bg-light">
@@ -70,10 +71,10 @@
                         <ul class="dropdown-menu" aria-labelledby="userDropdown">
                             <li><a class="dropdown-item" href="calories_calc.html"> حاسبة سعرات الحراية</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="bmi_calc.html">  حاسبة   سعرات المحروقه  </a></li>
+                            <li><a class="dropdown-item" href="bmi_calc.html"> حاسبة نسبة الدهون </a></li>
                             <li><hr class="dropdown-divider"></li>
   
-                            <li><a class="dropdown-item" href="water_calc.html"> حاسبة   سعرات المحروقه  </a></li>
+                            <li><a class="dropdown-item" href="water_calc.html">حاسبة نسبة الدهون </a></li>
                             <li><hr class="dropdown-divider"></li>
   
                             <li><a class="dropdown-item" href="macroz_calc.html">حاسبة الماكروز </a></li>
@@ -132,179 +133,49 @@
         </div>
     </nav>
     <div class="calc" style="background-image: url('assets/image/background.jpg');">
-        <h1>اخصائين التغذية
+        <h1>حاسبة نسبة الدهون 
         </h1>
     </div>
     <div class="container">
         <div class=" predcamp mt-5">
             <a href="index.html" class="predcamp-color"> الرئيسية</a> <span> / </span>
-            <a href="docotors.html" class="predcamp-color">  اخصائين التغذية </a>
+            <a href="water_calc.html" class="predcamp-color"> حاسبة نسبة الدهون </a>
         </div>
         <div class="row">
             <div class="col-lg-8 ">
                 <div class="content ">
-                    <div class="text-center">    
-                        <i class="fa-solid fa-user-doctor fa-5x"></i>
-                        <h1>اخصائين تغذية </h1>
-                    </div>
-                        <div class="docotors">
-                            <div class="row">
-                                <div class="col-md-6">
-                                     <div class="docotor d-flex">
-                                        <div class="">
-                                        <img src="assets/image/docotor1.jpg">
+                    <div class="text-center">
+                        <i class="fa-solid fa-glass-water fa-5x"></i>
+                        <h1>حاسبة نسبة الدهون </h1>
+                        <p>هذا هي صفحة حاسبة نسبة الدهون الحرارية التي تحتاجها يوميا </p>
+                        <div class="">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 col-12 ">
+                                        <input type="text" class="input-calc" id="weight" name="weight" placeholder="ادخل وزنك">
                                     </div>
-                                    <div class="">
-                                        <div class="d-flex justify-content-between">
-                                        <a href="docotor.html" class="title">هند صابر</a> 
-                                        <span class="spical">اخصائي تغذية</span>
+                                    <div class="col-md-6 col-12 ">
+                                        <input type="text" class="input-calc " id="length" name="length" placeholder="ادخل طول">
+            
                                     </div>
-                                    
-                                  <p class="description">اخصائي تغذية تعمل في مستشفي الاروبي ولديها خبره 5 سنوات في مجال التغذية</p>
-                                        <a href="docotor.html" class="btn btn-booking">حجز موعد</a>
+                                    <div class="col-md-6 col-12 ">
+                                        <input type="text" class="input-calc" id="age" nam="age" placeholder="ادخل عمر">
                                     </div>
-                                     </div>
+                                    <div class="col-md-6 col-12 ">
+                                        <select class="input-calc " id="gender" name="gender">
+                                            <option value="">الجنس</option>
+                                            <option value="male">ذكر</option>
+                                            <option value="female">انثي</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 col-12 m-auto">
+                                        <button class="btn-calc" id="showEditModelCategory">حساب</button>
+                                    </div>
                                 </div>
-                                <div class="col-md-6">
-                                     <div class="docotor d-flex">
-                                        <div class="">
-                                        <img src="assets/image/docotor1.jpg">
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex justify-content-between">
-                                        <a href="docotor.html" class="title">هند صابر</a> 
-                                        <span class="spical">اخصائي تغذية</span>
-                                    </div>
-                                    
-                                  <p class="description">اخصائي تغذية تعمل في مستشفي الاروبي ولديها خبره 5 سنوات في مجال التغذية</p>
-                                        <a href="docotor.html" class="btn btn-booking">حجز موعد</a>
-                                    </div>
-                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                     <div class="docotor d-flex">
-                                        <div class="">
-                                        <img src="assets/image/docotor1.jpg">
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex justify-content-between">
-                                        <a href="docotor.html" class="title">هند صابر</a> 
-                                        <span class="spical">اخصائي تغذية</span>
-                                    </div>
-                                    
-                                  <p class="description">اخصائي تغذية تعمل في مستشفي الاروبي ولديها خبره 5 سنوات في مجال التغذية</p>
-                                        <a href="docotor.html" class="btn btn-booking">حجز موعد</a>
-                                    </div>
-                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                     <div class="docotor d-flex">
-                                        <div class="">
-                                        <img src="assets/image/docotor1.jpg">
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex justify-content-between">
-                                        <a href="docotor.html" class="title">هند صابر</a> 
-                                        <span class="spical">اخصائي تغذية</span>
-                                    </div>
-                                    
-                                  <p class="description">اخصائي تغذية تعمل في مستشفي الاروبي ولديها خبره 5 سنوات في مجال التغذية</p>
-                                        <a href="docotor.html" class="btn btn-booking">حجز موعد</a>
-                                    </div>
-                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                     <div class="docotor d-flex">
-                                        <div class="">
-                                        <img src="assets/image/docotor1.jpg">
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex justify-content-between">
-                                        <a href="docotor.html" class="title">هند صابر</a> 
-                                        <span class="spical">اخصائي تغذية</span>
-                                    </div>
-                                    
-                                  <p class="description">اخصائي تغذية تعمل في مستشفي الاروبي ولديها خبره 5 سنوات في مجال التغذية</p>
-                                        <a href="docotor.html" class="btn btn-booking">حجز موعد</a>
-                                    </div>
-                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                     <div class="docotor d-flex">
-                                        <div class="">
-                                        <img src="assets/image/docotor1.jpg">
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex justify-content-between">
-                                        <a href="docotor.html" class="title">هند صابر</a> 
-                                        <span class="spical">اخصائي تغذية</span>
-                                    </div>
-                                    
-                                  <p class="description">اخصائي تغذية تعمل في مستشفي الاروبي ولديها خبره 5 سنوات في مجال التغذية</p>
-                                        <a href="docotor.html" class="btn btn-booking">حجز موعد</a>
-                                    </div>
-                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                     <div class="docotor d-flex">
-                                        <div class="">
-                                        <img src="assets/image/docotor1.jpg">
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex justify-content-between">
-                                        <a href="docotor.html" class="title">هند صابر</a> 
-                                        <span class="spical">اخصائي تغذية</span>
-                                    </div>
-                                    
-                                  <p class="description">اخصائي تغذية تعمل في مستشفي الاروبي ولديها خبره 5 سنوات في مجال التغذية</p>
-                                        <a href="docotor.html" class="btn btn-booking">حجز موعد</a>
-                                    </div>
-                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                     <div class="docotor d-flex">
-                                        <div class="">
-                                        <img src="assets/image/docotor1.jpg">
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex justify-content-between">
-                                        <a href="docotor.html" class="title">هند صابر</a> 
-                                        <span class="spical">اخصائي تغذية</span>
-                                    </div>
-                                    
-                                  <p class="description">اخصائي تغذية تعمل في مستشفي الاروبي ولديها خبره 5 سنوات في مجال التغذية</p>
-                                        <a href="docotor.html" class="btn btn-booking">حجز موعد</a>
-                                    </div>
-                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                     <div class="docotor d-flex">
-                                        <div class="">
-                                        <img src="assets/image/docotor1.jpg">
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex justify-content-between">
-                                        <a href="docotor.html" class="title">هند صابر</a> 
-                                        <span class="spical">اخصائي تغذية</span>
-                                    </div>
-                                    
-                                  <p class="description">اخصائي تغذية تعمل في مستشفي الاروبي ولديها خبره 5 سنوات في مجال التغذية</p>
-                                        <a href="docotor.html" class="btn btn-booking">حجز موعد</a>
-                                    </div>
-                                     </div>
-                                </div>
-                                <div class="pagination">
-                                    <a href="#" class="prev">&laquo; السابق</a>
-                                    <a href="#" class="active">1</a>
-                                    <a href="#">2</a>
-                                    <a href="#">3</a>
-                                    <a href="#">4</a>
-                                    <a href="#" class="next">التالي &raquo;</a>
-                                  </div>
-                            </div>
+                        </form>
                         </div>
-
-</div>
+                </div>
+                </div>
             </div>
             <div class="col-lg-3 sidebar d-none d-lg-block">
                 <div class="search">
