@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="assets/new_css/sidebar.css">
     <link rel="stylesheet" href="assets/new_css/pagination.css">
     <style>
+      ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px; 
+}
+
        .mt-0{
         margin-top: 0;
        }
@@ -19,13 +24,15 @@
         width: 600px;
         background: #fff;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
+        border-radius: 20px;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         height: 700px;
         margin: auto;
         margin-top: 20px;
+        box-shadow: 0 10px 20px rgba(0, 128, 0, 0.2), 
+              0 5px 10px rgba(0, 128, 0, 0.1);
 
       }
   
@@ -37,18 +44,15 @@
         align-items: center;
         gap: 10px;
       }
-  
       .chat-header img {
         width: 40px;
         height: 40px;
         border-radius: 50%;
       }
-  
       .chat-header h3 {
         margin: 0;
         font-size: 18px;
       }
-  
       .chat-messages {
         flex: 1;
         padding: 10px;
@@ -315,9 +319,7 @@
                 <div class="chat-input">
                   <input type="text" id="messageInput" placeholder="اكتب رسالتك هنا..." />
                   <button id="sendButton">
-                    <svg xmlns="http://www.w3.org/2001/svg" fill="#fff" viewBox="0 0 24 24">
-                      <path d="M0 0h24v24H0z" fill="none"/>
-                      <path d="M2 21l21-9-21-9v7l15 2-15 2z"/>
+                    <i class="fa-solid fa-paper-plane"></i>
                     </svg>
                   </button>
                 </div>
@@ -465,28 +467,19 @@
                   <p>${isUserTurn ? messageText : `رد من الطرف الآخر: ${messageText}`}</p>
                   <span class="time">${new Date().toLocaleTimeString()}</span>
                 `;
-        
                 if (isUserTurn) {
                   messageElement.classList.add("user");
-                  imgElement.src = "https://via.placeholder.com/40/007bff/fff"; // صورة المستخدم
+                  imgElement.src = "assets/image/docotor2.jpg"; 
                 } else {
                   messageElement.classList.add("other");
-                  imgElement.src = "https://via.placeholder.com/40"; // صورة الطرف الآخر
+                  imgElement.src = "assets/image/docotor2.jpg";
                 }
         
                 messageElement.appendChild(imgElement);
                 messageElement.appendChild(textContainer);
-        
-                // إضافة الرسالة إلى صندوق الدردشة
                 chatMessages.appendChild(messageElement);
-        
-                // تنظيف حقل الإدخال
                 messageInput.value = "";
-        
-                // تمرير إلى آخر الرسائل
                 chatMessages.scrollTop = chatMessages.scrollHeight;
-        
-                // تبديل من سيرسل الرسالة التالية
                 isUserTurn = !isUserTurn;
               }
         
