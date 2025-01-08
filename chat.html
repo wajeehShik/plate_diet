@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/new_css/bootstrap_rtl.css">
+    <link rel="stylesheet" href="assets/new_css/all.min.css">
+    <link rel="stylesheet" href="assets/new_css/style.css">
+    <link rel="stylesheet" href="assets/new_css/calc.css">
+    <link rel="stylesheet" href="assets/new_css/sidebar.css">
+    <link rel="stylesheet" href="assets/new_css/pagination.css">
+    <style>
+       .mt-0{
+        margin-top: 0;
+       }
+      .chat-container {
+        width: 600px;
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 700px;
+        margin: auto;
+        margin-top: 20px;
+
+      }
+  
+      .chat-header {
+        background: #075e54;
+        color: #fff;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+  
+      .chat-header img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+  
+      .chat-header h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+  
+      .chat-messages {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto; /* إظهار الشريط الأفقي للتمرير */
+        background: #ece5dd;
+        display: flex;
+        flex-direction: column;
+        direction: rtl; /* اتجاه النصوص من اليمين لليسار بشكل عام */
+        max-height: 700px; /* تحديد ارتفاع ثابت */
+      }
+  
+      .message {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        max-width: 70%;
+      }
+  
+      /* رسائل المستخدم على اليمين */
+      .message.user {
+        align-self: flex-end; /* الرسالة على اليمين */
+        background: #dcf8c6;
+        border-radius: 10px 0 10px 10px;
+        padding: 10px;
+        color: #000;
+        direction: ltr; /* عرض النص من اليمين لليسار */
+        text-align: ltr; /* محاذاة النص لليمين */
+      }
+  
+      /* رسائل الطرف الآخر على اليسار */
+      .message.other {
+        align-self: flex-start; /* الرسالة على اليسار */
+        background: #fff;
+        border-radius: 0 10px 10px 10px;
+        padding: 10px;
+        color: #000;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        direction: rtl; /* عرض النص من اليمين لليسار */
+        text-align: right; /* محاذاة النص لليمين */
+      }
+  
+      .message .username {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #333;
+      }
+  
+      .message .time {
+        font-size: 12px;
+        color: #888;
+        text-align: right;
+        margin-top: 5px;
+      }
+  
+      .chat-input {
+        display: flex;
+        border-top: 1px solid #ddd;
+        background: #f5f5f5;
+        padding: 10px;
+      }
+  
+      .chat-input input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-right: 5px;
+      }
+  
+      .chat-input button {
+        background: #075e54;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+  
+      .chat-input button svg {
+        width: 20px;
+        height: 20px;
+      }
+  
+      .message-content {
+        display: flex;
+        align-items: center;
+      }
+  
+      .message img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin: 0 10px;
+      }
+      @media(max-width:715px){
+        .chat-container{
+          width: 459px;
+        }
+      }
+    </style>
+    <title> طبق صحي</title>
+  </head>
+  <body>
+    <nav class="navbar  navbar-expand-lg navbar-light bg-light">
+        <div class="container d-flex">
+            <!-- Brand on the left -->
+            <a class="navbar-brand" href="#">
+                <img src="assets/image/logo.png" class="nav-logo">
+            </a>
+            <div class="d-block d-md-none timer nav-link text-white  "></div>
+            
+            <!-- Toggler button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0 d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="docotors.html">اخصائين</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="posts.html">مقالاتنا</a>
+                    </li>
+                  
+                    <!-- قائمة المستخدم -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            اقسام
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="posts.html"> تغذية</a></li>
+                            <li><hr class="dropdown-divider"></li>
+  
+                            <li><a class="dropdown-item" href="posts.html">تغذية اسرية</a></li>
+                            <li><hr class="dropdown-divider"></li>
+  
+                            <li><a class="dropdown-item" href="posts.html">امراض مزمنة</a></li>
+                            <li><hr class="dropdown-divider"></li>
+  
+                            <li><a class="dropdown-item" href="posts.html">سمنة </a></li>
+                            <li><hr class="dropdown-divider"></li>
+  
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="wasfas.html">مطبخ</a>
+                    </li>
+                 
+                    <!-- قائمة المستخدم -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            حاسبات
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="calories_calc.html"> حاسبة سعرات الحراية</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="bmi_calc.html">  حاسبة   سعرات المحروقه  </a></li>
+                            <li><hr class="dropdown-divider"></li>
+  
+                            <li><a class="dropdown-item" href="water_calc.html"> حاسبة   سعرات المحروقه  </a></li>
+                            <li><hr class="dropdown-divider"></li>
+  
+                            <li><a class="dropdown-item" href="macroz_calc.html">حاسبة الماكروز </a></li>
+                            <li><hr class="dropdown-divider"></li>
+  
+                            <li><a class="dropdown-item" href="fat_percentage_calc.html">نسبة الدهون </a></li>
+                            <li><hr class="dropdown-divider"></li>
+  
+                            <li><a class="dropdown-item" href="chat.html">نسبة السعرات </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">تواصل معنا</a>
+                    </li>
+                </ul>
+                <!-- أيقونة الإشعارات مع قائمة منسدلة -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- إشعارات 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="notificationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-bell"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="notificationDropdown">
+                            <li><a class="dropdown-item" href="#">إشعار 1: تم إرسال رسالة جديدة</a></li>
+                            <li><a class="dropdown-item" href="#">إشعار 2: لديك إشعار جديد في حسابك</a></li>
+                            <li><a class="dropdown-item" href="#">إشعار 3: تم تحديث النظام</a></li>
+                            <li><a class="dropdown-item" href="#">إشعار 4: تذكير بالاجتماع غدًا</a></li>
+                        </ul>
+                    </li>-->
+  
+                    <li class="nav-item">
+                        <a class="nav-link btn-nav" href="register.html">تسجيل </a>
+                    </li>
+  
+                    <li class="nav-item">
+                        <a class="nav-link btn-nav" href="login.html"> دخول</a>
+                    </li> 
+  
+                    <!-- قائمة المستخدم 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user"></i> اسم المستخدم
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="#">الحساب الشخصي</a></li>
+                            <li><a class="dropdown-item" href="#">الإعدادات</a></li>
+                            <li><a class="dropdown-item" href="#">الإشعارات</a></li>
+                            <li><a class="dropdown-item" href="#">تسجيل الخروج</a></li>
+                        </ul>
+                    </li>
+                <li class="nav-item">
+                    <div class="timer d-none d-lg-block  nav-link text-white fw-bold"></div>
+                </li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+    <div class="container">
+        <div class=" predcamp mt-5">
+            <a href="index.html" class="predcamp-color"> الرئيسية</a> <span> / </span>
+            <a href="docotors.html" class="predcamp-color">محادثة </a>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 ">
+              <div class="chat-container">
+                <div class="chat-header">
+                  <img src="assets/image/docotor2.jpg" alt="User">
+                  <h3>اسم المستخدم</h3>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                  <!-- رسائل -->
+                  <div class="message other">
+                    <div class="message-content">
+                      <img src="assets/image/docotor2.jpg" alt="User">
+                      <div>
+                        <div class="username">المساعد</div>
+                        <p class="mt-0">مرحبًا! كيف يمكنني مساعدتك؟</p>
+                      </div>
+                    </div>
+                    <span class="time">10:30 صباحًا</span>
+                  </div>
+                  <div class="message user">
+                    <div class="message-content">
+                      <img src="assets/image/docotor2.jpg" alt="User">
+                      <div>
+                        <div class="username">أنت</div>
+                        <p class="mt-0">أريد تصميم شبيه واتساب!</p>
+                      </div>
+                    </div>
+                    <span class="time">10:31 صباحًا</span>
+                  </div>
+                </div>
+                <div class="chat-input">
+                  <input type="text" id="messageInput" placeholder="اكتب رسالتك هنا..." />
+                  <button id="sendButton">
+                    <svg xmlns="http://www.w3.org/2001/svg" fill="#fff" viewBox="0 0 24 24">
+                      <path d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M2 21l21-9-21-9v7l15 2-15 2z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+        
+            </div>
+            <div class="col-lg-3 sidebar d-none d-xl-block">
+                <div class="search">
+                    <p class="sidebar-title">بحث</p>
+                    <form>
+                    <input type="text" placeholder="بحث">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                </div>
+                <div class="wasfas">
+                    <p class="sidebar-title">اخر مقالات</p>
+                    <div class="sidebar-wasfa  d-flex">
+                        <img src="assets/image/food2.jpg" class="img-thumbnail">
+                        <div class="d-flex flex-column content">
+                        <a href="" class="title">كباب</a>
+                        <p>يعتبر الكباب من اشهر الاكلات الفلسطينية ...</p></div>
+                    </div>
+                    <div class="sidebar-wasfa  d-flex">
+                        <img src="assets/image/food2.jpg" class="img-thumbnail">
+                        <div class="d-flex flex-column content">
+                        <a href="" class="title">كباب</a>
+                        <p>يعتبر الكباب من اشهر الاكلات الفلسطينية ...</p></div>
+                    </div>
+                    <div class="sidebar-wasfa  d-flex">
+                        <img src="assets/image/food2.jpg" class="img-thumbnail">
+                        <div class="d-flex flex-column content">
+                        <a href="" class="title">كباب</a>
+                        <p>يعتبر الكباب من اشهر الاكلات الفلسطينية ...</p></div>
+                    </div>
+                </div>
+                <div class="categories">
+                    <span class="sidebar-title">اقسام</span>
+                    <ul>
+                        <li> 
+                            <span>سكري</span>
+                            <span class="number">(20)</span>
+                        </li>
+                        <li> 
+                            <span>سكري</span>
+                            <span class="number">(20)</span>
+                        </li>
+                        <li> 
+                            <span>سكري</span>
+                            <span class="number">(20)</span>
+                        </li>
+                        <li> 
+                            <span>سكري</span>
+                            <span class="number">(20)</span>
+                        </li>
+                  
+                    </ul>
+                </div>
+                <div class="tags">
+                    <h6 class="sidebar-title">وسوم</h6>
+                    <div class="tags">
+                        
+                    <a href="">تغذية</a>
+                    <a href="">تغذية</a>
+                    <a href="">تغذية</a>
+                    <a href="">تغذية</a>
+                    <a href="">تغذية</a>
+                    <a href="">تغذية</a>
+                    <a href="">تغذية</a>
+                    <a href="">تغذية</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="pt-5 pb-5">
+        <div class="container">
+      <div class="row">
+          <div class="col-md-3">
+            <img src="assets/image/logo.png" class="logo">
+            <p class="pt-4">جهتك المثالية لتحقيق نمط حياة صحي ومتوازن. نقدم لك نصائح غذائية موثوقة، وصفات لذيذة وسهلة التحضير، بالإضافة إلى خطط تغذية مدروسة تلبي احتياجاتك الصحية. سواء كنت ترغب في تحسين لياقتك البدنية، فقدان الوزن، أو تعزيز صحتك العامة، ستجد هنا كل ما تحتاجه لتحقيق أهدافك. انضم إلينا لتستمتع بحياة صحية ومتوازنة مع محتوى مدعوم من خبراء التغذية.
+            </p>
+          </div>
+          <div class="col-md-3 pt-5  links">
+            <h2>روابط مفيدة</h2>
+            <ul class="pt-5">
+              <li><a href="">مقالات</a></li>
+              <li><a href="">اخصائين تغذية</a></li>
+              <li><a href="">حاسبة الوجبات</a></li>
+              <li><a href="">استشارات</a></li>
+              <li><a href="">اشتراك</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 pt-5 apps">
+            <h2>حمل تطبيقنا</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sapiente totam dicta vitae consequatur, ratione quis cumque temporibus quibusdam nam similique necessitatibus ipsam tenetur, recusandae quidem laudantium dolorem doloribus alias.</p>
+            <ul class="pt-5">
+              <li>
+                <a href=""><span>من متجر </span><i class="fa-brands fa-apple"></i> </a>
+              </li>
+              <li>
+                <a href=""> <span>من متجر</span><i class="fa-brands fa-android"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 pt-5">
+            <h2 class="text-center"> عنواننا</h2>
+              <p class="mt-5 d-flex justify-content-center gap-2 " ><span>غزة فلسطين</span><i class="fa-solid fa-location-dot"></i></p>
+              <p  class="mt-5 d-flex justify-content-center gap-2 " >
+                <span>0595913186</span> <i class="fa-solid fa-phone"></i></p>
+              <p  class="mt-5 d-flex justify-content-center gap-2 " >    
+                <span>snuora2019@gail.com</span><i class="fa-regular fa-envelope"></i></p>
+          </div>
+        </div>
+      </div>
+      
+        <div class="copy-right text-center">تم تصميم بواسطة وجيه شيخ العيد
+      
+        </div>
+      </footer>
+          <!-- Option 1: Bootstrap Bundle with Popper -->
+          <script src="assets/js/bootstrap.js"></script>
+          <script src="assets/js/jquery-3.3.1.min.js"></script>
+          <script src="assets/js/script.js"></script>
+          
+
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const messageInput = document.getElementById("messageInput");
+              const chatMessages = document.getElementById("chatMessages");
+              const sendButton = document.getElementById("sendButton");
+        
+              let isUserTurn = true; // لتحديد من يرسل الرسالة التالية (المستخدم أو الطرف الآخر)
+        
+              function sendMessage() {
+                const messageText = messageInput.value.trim();
+                if (messageText === "") return;
+        
+                // تحديد من سيرسل الرسالة بناءً على isUserTurn
+                const messageElement = document.createElement("div");
+                messageElement.classList.add("message");
+        
+                const imgElement = document.createElement("img");
+                const textContainer = document.createElement("div");
+                textContainer.innerHTML = `
+                  <p>${isUserTurn ? messageText : `رد من الطرف الآخر: ${messageText}`}</p>
+                  <span class="time">${new Date().toLocaleTimeString()}</span>
+                `;
+        
+                if (isUserTurn) {
+                  messageElement.classList.add("user");
+                  imgElement.src = "https://via.placeholder.com/40/007bff/fff"; // صورة المستخدم
+                } else {
+                  messageElement.classList.add("other");
+                  imgElement.src = "https://via.placeholder.com/40"; // صورة الطرف الآخر
+                }
+        
+                messageElement.appendChild(imgElement);
+                messageElement.appendChild(textContainer);
+        
+                // إضافة الرسالة إلى صندوق الدردشة
+                chatMessages.appendChild(messageElement);
+        
+                // تنظيف حقل الإدخال
+                messageInput.value = "";
+        
+                // تمرير إلى آخر الرسائل
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+        
+                // تبديل من سيرسل الرسالة التالية
+                isUserTurn = !isUserTurn;
+              }
+        
+              sendButton.addEventListener("click", sendMessage);
+        
+              messageInput.addEventListener("keypress", function (event) {
+                if (event.key === "Enter") {
+                  sendMessage();
+                }
+              });
+            });
+          </script>
+        </body>
+      </html>
