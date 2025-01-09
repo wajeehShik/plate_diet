@@ -413,8 +413,8 @@ display: none;
         margin-top: 160px;
     }
 }
-@media(max-width:530px){
+@media (max-width: 530px) {
     .newsletter input {
-        width: 229px;}
-        
+        width: 196px;
+    }
 }
