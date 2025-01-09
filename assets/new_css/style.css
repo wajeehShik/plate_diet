@@ -1,3 +1,8 @@
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px; 
+}
 ::-webkit-scrollbar-track {
   background: #f0f4f3;
   border-radius: 10px; 
@@ -20,6 +25,8 @@ ul li{
 list-style: none;
 }
 .navbar{
+  position: relative;
+  z-index: 10;
     padding-right: 20px;
     padding-left: 20px;
     background-color: transparent !important;
@@ -73,7 +80,9 @@ transform: scale(1.1);
     background: rgba(0, 0, 0, 0.8); 
     border: 1px solid rgba(255, 255, 255, 0.1); 
 }
-
+.rtl-direction{
+  direction: rtl;
+}
 /* footer */
 footer{
     background-color:#e6f1d8;

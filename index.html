@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/new_css/bootstrap_rtl.css">
+    <link rel="stylesheet" href="assets/plugins/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="assets/plugins/slick-carousel/slick/slick-theme.css">
+    <link rel="stylesheet" href="assets/new_css/all.min.css">
+    <link rel="stylesheet" href="assets/new_css/style.css">
+    <link rel="stylesheet" href="assets/new_css/index.css">
+</head>
+<body>
+    <nav class="navbar rtl-direction  navbar-expand-lg navbar-light bg-light">
+        <div class="container d-flex">
+            <!-- Brand on the left -->
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/image/logo.png" class="nav-logo">
+            </a>
+            <div class="d-block d-md-none timer nav-link text-white  "></div>
+            
+            <!-- Toggler button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0 d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="docotors.html">اخصائين</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="posts.html">مقالاتنا</a>
+                    </li>
+                  
+                    <!-- قائمة المستخدم -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            اقسام
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="posts.html"> تغذية</a></li>
+                            <li><hr class="dropdown-divider"></li>
+  
+                            <li><a class="dropdown-item" href="posts.html">تغذية اسرية</a></li>
+                            <li><hr class="dropdown-divider"></li>
+  
+                            <li><a class="dropdown-item" href="posts.html">امراض مزمنة</a></li>
+                            <li><hr class="dropdown-divider"></li>
+  
+                            <li><a class="dropdown-item" href="posts.html">سمنة </a></li>
+  
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="wasfas.html">مطبخ</a>
+                    </li>
+                 
+                    <!-- قائمة المستخدم -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            حاسبات
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="calories_calc.html"> حاسبة سعرات الحراية</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="bmi_calc.html"> حاسبة macroz </a></li>
+                            <li><hr class="dropdown-divider"></li>
+  
+                            <li><a class="dropdown-item" href="water_calc.html">حاسبة macroz </a></li>
+                            <li><hr class="dropdown-divider"></li>
+  
+                            <li><a class="dropdown-item" href="macroz_calc.html">حاسبة الماكروز </a></li>
+                            <li><hr class="dropdown-divider"></li>
+  
+                            <li><a class="dropdown-item" href="fat_percentage_calc.html">نسبة الدهون </a></li>
+                            <li><hr class="dropdown-divider"></li>
+  
+                            <li><a class="dropdown-item" href="chat.html">نسبة السعرات </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">تواصل معنا</a>
+                    </li>
+                </ul>
+                <!-- أيقونة الإشعارات مع قائمة منسدلة -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- إشعارات 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="notificationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-bell"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="notificationDropdown">
+                            <li><a class="dropdown-item" href="#">إشعار 1: تم إرسال رسالة جديدة</a></li>
+                            <li><a class="dropdown-item" href="#">إشعار 2: لديك إشعار جديد في حسابك</a></li>
+                            <li><a class="dropdown-item" href="#">إشعار 3: تم تحديث النظام</a></li>
+                            <li><a class="dropdown-item" href="#">إشعار 4: تذكير بالاجتماع غدًا</a></li>
+                        </ul>
+                    </li>-->
+  
+                    <li class="nav-item">
+                        <a class="nav-link btn-nav" href="register.html">تسجيل </a>
+                    </li>
+  
+                    <li class="nav-item">
+                        <a class="nav-link btn-nav" href="login.html"> دخول</a>
+                    </li> 
+  
+                    <!-- قائمة المستخدم 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user"></i> اسم المستخدم
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="#">الحساب الشخصي</a></li>
+                            <li><a class="dropdown-item" href="#">الإعدادات</a></li>
+                            <li><a class="dropdown-item" href="#">الإشعارات</a></li>
+                            <li><a class="dropdown-item" href="#">تسجيل الخروج</a></li>
+                        </ul>
+                    </li>
+                <li class="nav-item">
+                    <div class="timer d-none d-lg-block  nav-link text-white fw-bold"></div>
+                </li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+	
+<section class="home p-5 rtl-direction">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 cl-md-12 content d-flex  flex-column">
+                <h2 class="text-center p-2">خيارك الوحيد</h2>
+                <h1 class="text-center">Plate Diet</h1>
+                <h2 class="text-center">لحياه صحية</h2>
+  <p class="mt-2">جهتك المثالية لتحقيق نمط حياة صحي ومتوازن. نقدم لك نصائح غذائية موثوقة، وصفات لذيذة وسهلة التحضير، بالإضافة إلى خطط تغذية مدروسة تلبي احتياجاتك الصحية. سواء كنت ترغب في تحسين لياقتك البدنية، فقدان الوزن، أو تعزيز صحتك العامة، ستجد هنا كل ما تحتاجه لتحقيق أهدافك. انضم إلينا لتستمتع بحياة صحية ومتوازنة مع محتوى مدعوم من خبراء التغذية.</p>
+<a href="">احصل علي استشارة مجانية الان</a>           
+</div>
+            <div class="col-md-6 cl-sm-12 position-relative ">
+                <img src="assets/image/home.jpg" class="img-fluid" alt="Home Image">
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="services gray-bg text-center p-5">
+    <h2 class="title-section">خدماتنا</h2>
+    <p>نقدم لك خدمات مخصصة لضمان حصولك على أفضل رعاية غذائية تناسب احتياجاتك الصحية والبدنية. سواء كنت تسعى لفقدان الوزن، تحسين مستوى الطاقة، أو الحفاظ على صحتك</p>
+<div class="container">
+  <div class="row">
+      <div class="col-md-4 ">
+        <div class="service d-flex p-2 mt-5">
+            <div class="title ">
+                <img src="assets/image/service.png" alt="">
+            </div>
+            <div class="content">
+            <span>استشارات غذائية شخصية</span>
+            <p class="mt-2">نضع خطط غذائية مخصصة تناسب احتياجاتك الصحية والبدنية لتحقيق أهدافك بسهولة</p>
+            </div>
+        </div>      <div class="service d-flex p-2 mt-5">
+            <div class="title ">
+                <img src="assets/image/service.png" alt="">
+            </div>
+            <div class="content">
+            <span>استشارات غذائية شخصية</span>
+            <p class="mt-2">نضع خطط غذائية مخصصة تناسب احتياجاتك الصحية والبدنية لتحقيق أهدافك بسهولة</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <img src="assets/image/service.png" class="main-img">
+    </div>
+    <div class="col-md-4">
+        <div class="service d-flex p-2 mt-5">
+            <div class="title ">
+                <img src="assets/image/service.png" alt="">
+            </div>
+            <div class="content">
+            <span>استشارات غذائية شخصية</span>
+            <p class="mt-2">نضع خطط غذائية مخصصة تناسب احتياجاتك الصحية والبدنية لتحقيق أهدافك بسهولة</p>
+            </div>
+        </div>      <div class="service d-flex p-2 mt-5">
+            <div class="title ">
+                <img src="assets/image/service.png" alt="">
+            </div>
+            <div class="content">
+            <span>استشارات غذائية شخصية</span>
+            <p class="mt-2">نضع خطط غذائية مخصصة تناسب احتياجاتك الصحية والبدنية لتحقيق أهدافك بسهولة</p>
+            </div>
+        </div>
+    
+    </div>
+  </div>
+</div>
+</section>
+<section class="subscribe rtl-direction text-center  p-5">
+	<h2 class="title-section">اشترك معنا</h2>
+	<p>انضم الآن إلى موقعنا للحصول على نصائح غذائية مخصصة، خطط صحية، ودعم مستمر لتحسين نمط حياتك وصحتك العامة!</p>
+	<div class="container">
+	  <div class="row">
+		<div class="col-lg-3 col-md-6 price ">
+				<h3 class="p-3 text-center">Test</h3>
+				<img src="assets/image/Group248.png" alt="">
+				<span class="salary">$5</span>
+				<div class="offer">
+					
+			<ul class="feature-list">
+				<li class="feature-item">
+				  <i class="fas fa-check-circle fa-lg"></i> وصول إلى وصفات صحية يومية
+				</li>
+				<li class="feature-item">
+				  <i class="fas fa-check-circle fa-lg"></i> نصائح غذائية مخصصة
+				</li>
+				<li class="feature-item">
+				  <i class="fas fa-check-circle fa-lg"></i> خطة غذائية شهرية شاملة
+				</li>
+				<li class="feature-item">
+				  <i class="fas fa-check-circle fa-lg"></i> استشارات مع مختصين في التغذية
+				</li>
+				<li class="feature-item">
+				  <i class="fas fa-check-circle fa-lg"></i> خصومات حصرية على المنتجات الصحية
+				</li>
+			  </ul>
+				</div>
+				<a href="">اشترك الان</a>
+	</div>
+	<div class="col-lg-3 col-md-6 price ">
+	  <h3 class="p-3 text-center">Test</h3>
+	  <img src="assets/image/Group248.png" alt="">
+	  <span class="salary">$5</span>
+	  <div class="offer">
+		  
+	<ul class="feature-list">
+	  <li class="feature-item">
+		<i class="fas fa-check-circle fa-lg"></i> وصول إلى وصفات صحية يومية
+	  </li>
+	  <li class="feature-item">
+		<i class="fas fa-check-circle fa-lg"></i> نصائح غذائية مخصصة
+	  </li>
+	  <li class="feature-item">
+		<i class="fas fa-check-circle fa-lg"></i> خطة غذائية شهرية شاملة
+	  </li>
+	  <li class="feature-item">
+		<i class="fas fa-check-circle fa-lg"></i> استشارات مع مختصين في التغذية
+	  </li>
+	  <li class="feature-item">
+		<i class="fas fa-check-circle fa-lg"></i> خصومات حصرية على المنتجات الصحية
+	  </li>
+	</ul>
+	  </div>
+	  <a href="">اشترك الان</a>
+	</div>
+  <div class="col-lg-3 col-md-6 price ">
+	  <h3 class="p-3 text-center">Test</h3>
+	  <img src="assets/image/Group248.png" alt="">
+	  <span class="salary">$5</span>
+	  <div class="offer">
+		  
+	<ul class="feature-list">
+	  <li class="feature-item">
+		<i class="fas fa-check-circle fa-lg"></i> وصول إلى وصفات صحية يومية
+	  </li>
+	  <li class="feature-item">
+		<i class="fas fa-check-circle fa-lg"></i> نصائح غذائية مخصصة
+	  </li>
+	  <li class="feature-item">
+		<i class="fas fa-check-circle fa-lg"></i> خطة غذائية شهرية شاملة
+	  </li>
+	  <li class="feature-item">
+		<i class="fas fa-check-circle fa-lg"></i> استشارات مع مختصين في التغذية
+	  </li>
+	  <li class="feature-item">
+		<i class="fas fa-check-circle fa-lg"></i> خصومات حصرية على المنتجات الصحية
+	  </li>
+	</ul>
+	  </div>
+	  <a href="">اشترك الان</a>
+	</div>
+  <div class="col-lg-3 col-md-6 price ">
+	  <h3 class="p-3 text-center">Test</h3>
+	  <img src="assets/image/Group248.png" alt="">
+	  <span class="salary">$5</span>
+	  <div class="offer">
+		  
+	<ul class="feature-list">
+	  <li class="feature-item">
+		<i class="fas fa-check-circle fa-lg"></i> وصول إلى وصفات صحية يومية
+	  </li>
+	  <li class="feature-item">
+		<i class="fas fa-check-circle fa-lg"></i> نصائح غذائية مخصصة
+	  </li>
+	  <li class="feature-item">
+		<i class="fas fa-check-circle fa-lg"></i> خطة غذائية شهرية شاملة
+	  </li>
+	  <li class="feature-item">
+		<i class="fas fa-check-circle fa-lg"></i> استشارات مع مختصين في التغذية
+	  </li>
+	  <li class="feature-item">
+		<i class="fas fa-check-circle fa-lg"></i> خصومات حصرية على المنتجات الصحية
+	  </li>
+	</ul>
+	  </div>
+	  <a href="">اشترك الان</a>
+	</div>
+	</div>
+	</div>
+	</section>
+	<section class="docotors gray-bg text-center pt-5">
+	  <h2 class="title-section">اطباء </h2>
+	<div class="container">
+	  <div class="row pt-5 pb-5">
+		<div class="col-lg-3 col-md-6  docotor ">
+	  <img src="assets/image/docotor1.jpg">
+	  <h3 class="pt-4">وجيه أيوب</h3>
+	  <span class="pt-3">اخصائي تغذية</span>
+	  <p class="pt-2">خبرة في مجال التغذية منذ 25 عام ويعمل لدي مستشفي ناصر </p> 
+	  <a class="" href="">عرض</a>
+		</div>
+		<div class="col-lg-3 col-md-6  docotor">
+		  <img src="assets/image/docotor4.jpg">
+		  <h3 class="pt-4">وجيه أيوب</h3>
+		  <span class="pt-3">اخصائي تغذية</span>
+		  <p class="pt-2">خبرة في مجال التغذية منذ 25 عام ويعمل لدي مستشفي ناصر </p> 
+		  <a class="" href="">عرض</a>
+			</div>
+			<div class="col-lg-3 col-md-6  docotor">
+			  <img src="assets/image/docotor2.jpg">
+			  <h3 class="pt-4">وجيه أيوب</h3>
+			  <span class="pt-3">اخصائي تغذية</span>
+			  <p class="pt-2">خبرة في مجال التغذية منذ 25 عام ويعمل لدي مستشفي ناصر </p> 
+			  <a class="" href="">عرض</a>
+				</div>
+				<div class="col-lg-3 col-md-6  docotor">
+				  <img src="assets/image/docotor3.jpg">
+				  <h3 class="pt-4">وجيه أيوب</h3>
+				  <span class="pt-3">اخصائي تغذية</span>
+				  <p class="pt-2">خبرة في مجال التغذية منذ 25 عام ويعمل لدي مستشفي ناصر </p> 
+				  <a class="" href="">عرض</a>
+					</div>
+	  </div>
+	</div>
+	</section>
+	<section class="newsletter rtl-direction subscribe text-center p-5">
+	  <h2 class="title-section">اشترك معنا</h2>
+	  <p>اشترك معنا لمتابعة اخبار تغذية اولا باول</p>
+	  <form>
+		<div class="input-group pt-5">
+		  <input type="email"  placeholder="أدخل بريدك الإلكتروني" class="rtl-direction" required  >
+		  <button type="submit" class="btn btn-subscribe">اشترك</button>
+		</div>
+	  </form>
+	</section>
+	<section class="section testimonial-2 pt-5 pb-5 gray-bg">
+	<div class="container">
+	  <div class="row justify-content-center">
+		<div class="col-lg-7">
+		  <div class="section-title text-center">
+			<h2>تقييمات المستخدمين</h2>
+      <p>في هذا القسم نعرض لكم اهم تقييمات لخدمات موقعنا</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<div class="container ">
+	  <div class="row align-items-center">
+		<div class="col-lg-12 testimonial-wrap-2 ">
+		  <div class="testimonial-block   style-2  gray-bg">
+			<i class="icofont-quote-right"></i>
+  
+			<div class="testimonial-thumb">
+			  <img src="assets/image/docotor2.jpg" alt="" class="img-fluid">
+			</div>
+  
+			<div class="client-info rtl-direction">
+			  <h4>Amazing service!</h4>
+			  <div class="ratting">
+          <i class="fa-solid fa-star fa-custom"></i>
+          <i class="fa-solid fa-star fa-custom"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+			  <p>
+				They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
+			  </p>
+			</div>
+		  </div>
+      <div class="testimonial-block   style-2  gray-bg">
+        <i class="icofont-quote-right"></i>
+    
+        <div class="testimonial-thumb">
+          <img src="assets/image/docotor2.jpg" alt="" class="img-fluid">
+        </div>
+    
+        <div class="client-info rtl-direction">
+          <h4>Amazing service!</h4>
+          <div class="ratting">
+            <i class="fa-solid fa-star fa-custom"></i>
+            <i class="fa-solid fa-star fa-custom"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <p>
+          They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
+          </p>
+        </div>
+        </div>		  <div class="testimonial-block   style-2  gray-bg">
+          <i class="icofont-quote-right"></i>
+      
+          <div class="testimonial-thumb">
+            <img src="assets/image/docotor2.jpg" alt="" class="img-fluid">
+          </div>
+      
+          <div class="client-info rtl-direction">
+            <h4>Amazing service!</h4>
+            <div class="ratting">
+              <i class="fa-solid fa-star fa-custom"></i>
+              <i class="fa-solid fa-star fa-custom"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p>
+            They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
+            </p>
+          </div>
+          </div>		  <div class="testimonial-block   style-2  gray-bg">
+            <i class="icofont-quote-right"></i>
+        
+            <div class="testimonial-thumb">
+              <img src="assets/image/docotor2.jpg" alt="" class="img-fluid">
+            </div>
+        
+            <div class="client-info rtl-direction">
+              <h4>Amazing service!</h4>
+              <div class="ratting">
+                <i class="fa-solid fa-star fa-custom"></i>
+                <i class="fa-solid fa-star fa-custom"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>
+              They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
+              </p>
+            </div>
+            </div>		  <div class="testimonial-block   style-2  gray-bg">
+              <i class="icofont-quote-right"></i>
+          
+              <div class="testimonial-thumb">
+                <img src="assets/image/docotor2.jpg" alt="" class="img-fluid">
+              </div>
+          
+              <div class="client-info rtl-direction">
+                <h4>Amazing service!</h4>
+                <div class="ratting">
+                  <i class="fa-solid fa-star fa-custom"></i>
+                  <i class="fa-solid fa-star fa-custom"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <p>
+                They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
+                </p>
+              </div>
+              </div>		  <div class="testimonial-block   style-2  gray-bg">
+                <i class="icofont-quote-right"></i>
+            
+                <div class="testimonial-thumb">
+                  <img src="assets/image/docotor2.jpg" alt="" class="img-fluid">
+                </div>
+            
+                <div class="client-info rtl-direction">
+                  <h4>Amazing service!</h4>
+                  <div class="ratting">
+                    <i class="fa-solid fa-star fa-custom"></i>
+                    <i class="fa-solid fa-star fa-custom"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <p>
+                  They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
+                  </p>
+                </div>
+                </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+	
+  <footer class="pt-5 pb-5">
+	<div class="container">
+  <div class="row">
+	  <div class="col-md-3">
+		<img src="assets/image/logo.png" class="logo">
+		<p class="pt-4">جهتك المثالية لتحقيق نمط حياة صحي ومتوازن. نقدم لك نصائح غذائية موثوقة، وصفات لذيذة وسهلة التحضير، بالإضافة إلى خطط تغذية مدروسة تلبي احتياجاتك الصحية. سواء كنت ترغب في تحسين لياقتك البدنية، فقدان الوزن، أو تعزيز صحتك العامة، ستجد هنا كل ما تحتاجه لتحقيق أهدافك. انضم إلينا لتستمتع بحياة صحية ومتوازنة مع محتوى مدعوم من خبراء التغذية.
+		</p>
+	  </div>
+	  <div class="col-md-3 pt-5  links">
+		<h2>روابط مفيدة</h2>
+		<ul class="pt-5">
+		  <li><a href="">مقالات</a></li>
+		  <li><a href="">اخصائين تغذية</a></li>
+		  <li><a href="">حاسبة الوجبات</a></li>
+		  <li><a href="">استشارات</a></li>
+		  <li><a href="">اشتراك</a></li>
+		</ul>
+	  </div>
+	  <div class="col-md-3 pt-5 apps">
+		<h2>حمل تطبيقنا</h2>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sapiente totam dicta vitae consequatur, ratione quis cumque temporibus quibusdam nam similique necessitatibus ipsam tenetur, recusandae quidem laudantium dolorem doloribus alias.</p>
+		<ul class="pt-5">
+		  <li>
+			<a href=""><span>من متجر </span><i class="fa-brands fa-apple"></i> </a>
+		  </li>
+		  <li>
+			<a href=""> <span>من متجر</span><i class="fa-brands fa-android"></i></a>
+		  </li>
+		</ul>
+	  </div>
+	  <div class="col-md-3 pt-5">
+		<h2 class="text-center"> عنواننا</h2>
+		  <p class="mt-5 d-flex justify-content-center gap-2 " ><span>غزة فلسطين</span><i class="fa-solid fa-location-dot"></i></p>
+		  <p  class="mt-5 d-flex justify-content-center gap-2 " >
+			<span>0595913186</span> <i class="fa-solid fa-phone"></i></p>
+		  <p  class="mt-5 d-flex justify-content-center gap-2 " >    
+			<span>snuora2019@gail.com</span><i class="fa-regular fa-envelope"></i></p>
+	  </div>
+	</div>
+  </div>
+  
+	<div class="copy-right text-center">تم تصميم بواسطة وجيه شيخ العيد
+  
+	</div>
+  </footer>
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/plugins/jquery/jquery.js"></script>
+  <script src="assets/plugins/slick-carousel/slick/slick.min.js"></script>
+  <script>
+
+
+	$('.testimonial-wrap').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  infinite: true,
+	  dots: true,
+	  arrows: false,
+	  autoplay: true,
+	  vertical:true,
+	  verticalSwiping:true,
+	  autoplaySpeed: 6000,
+	  responsive: [
+		  {
+			breakpoint: 1024,
+			settings: {
+			  slidesToShow:1,
+			  slidesToScroll: 1,
+			  infinite: true,
+			  dots: true
+			}
+		  },
+		  {
+			breakpoint: 900,
+			settings: {
+			  slidesToShow: 1,
+			  slidesToScroll: 1
+			}
+		  },{
+			breakpoint: 600,
+			settings: {
+			  slidesToShow: 1,
+			  slidesToScroll: 1
+			}
+		  },
+		  {
+			breakpoint: 480,
+			settings: {
+			  slidesToShow: 1,
+			  slidesToScroll: 1
+			}
+		  }
+		
+		]
+	});
+  
+	$('.testimonial-wrap-2').slick({
+	  slidesToShow: 2,
+	  slidesToScroll: 2,
+	  infinite: true,
+	  dots: true,
+	  arrows:false,
+	  autoplay: true,
+	  autoplaySpeed: 6000,
+	  responsive: [
+		  {
+			breakpoint: 1024,
+			settings: {
+			  slidesToShow:2,
+			  slidesToScroll:2,
+			  infinite: true,
+			  dots: true
+			}
+		  },
+		  {
+			breakpoint: 900,
+			settings: {
+			  slidesToShow: 1,
+			  slidesToScroll: 1
+			}
+		  },{
+			breakpoint: 600,
+			settings: {
+			  slidesToShow: 1,
+			  slidesToScroll: 1
+			}
+		  },
+		  {
+			breakpoint: 480,
+			settings: {
+			  slidesToShow: 1,
+			  slidesToScroll: 1
+			}
+		  }
+		
+		]
+	});
+  
+  </script>
+</body>
+</html>
